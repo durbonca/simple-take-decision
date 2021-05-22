@@ -26,7 +26,7 @@ function App() {
         <h1 className="text-6xl text-center mt-3">La Dama de la fortuna</h1>
       </div>
 
-      <form className="my-4" onSubmit={handleSubmit}>
+      <form className="my-4 flex justify-center" onSubmit={handleSubmit}>
         <input 
           style={{maxWidth:"50%"}}
           className="rounded-tl-full rounded-bl-full p-3 outline-none"
