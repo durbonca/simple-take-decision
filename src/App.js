@@ -19,21 +19,23 @@ function App() {
   }
 
   return (
-    <div className="h-screen flex flex-col bg-purple-400 items-center justify-around">
+    <div className="min-h-screen flex flex-col bg-purple-400 w-full items-center justify-around">
       
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center my-2">
         <img className="max-h-64 shadow-2xl rounded-3xl" src="./bruja.jpeg" alt="imagen de bruja"/>
         <h1 className="text-6xl text-center mt-3">La Dama de la fortuna</h1>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form className="my-4" onSubmit={handleSubmit}>
         <input 
-          className="rounded-tl-full rounded-bl-full p-4 outline-none"
+          style={{maxWidth:"50%"}}
+          className="rounded-tl-full rounded-bl-full p-3 outline-none"
           type="text" 
           value={element} 
           onChange={(event) => setElement(event.target.value)} />
         <input 
-          className="rounded-tr-full rounded-br-full p-4 bg-green-500 text-white cursor-pointer"
+          style={{maxWidth:"50%"}}
+          className="rounded-tr-full rounded-br-full p-3 bg-green-500 text-white cursor-pointer"
           type="submit" value="agregar desicion" disabled={!element}/>
       </form>
       <ul>
@@ -41,7 +43,7 @@ function App() {
       </ul>
 
       <button
-        className="bg-green-500 text-xl font-bold w-1/2 rounded-full p-4" 
+        className="bg-green-500 text-xl font-bold w-1/2 my-2 rounded-full p-4" 
         onClick={()=>handleRandom()} disabled={!elementsToRaffle.length}>SORTEAR A LA DAMA DE LA FORTUNA! 🧙🏻‍♀️
       </button>
     </div>
