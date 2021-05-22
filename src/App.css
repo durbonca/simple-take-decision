@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input:disabled{
+    color: #444444;
+    background-color: gray;
+}
+
+h1{
+    
+}

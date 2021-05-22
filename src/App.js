@@ -19,23 +19,31 @@ function App() {
   }
 
   return (
-    <div className="bg-gray-300 h-screen flex flex-col">
-      <h1>La Dama de la fortuna</h1>
+    <div className="h-screen flex flex-col bg-purple-500 items-center justify-around">
+      
+      <div class="flex flex-col items-center">
+        <img className="max-h-64 shadow-2xl rounded-3xl" src="./bruja.jpeg" alt="imagen de bruja"/>
+        <h1 className="text-6xl text-center">La Dama de la fortuna</h1>
+      </div>
 
       <form onSubmit={handleSubmit}>
-        <label ></label>
         <input 
-          
+          className="rounded-tl-full rounded-bl-full p-4 outline-none"
           type="text" 
           value={element} 
           onChange={(event) => setElement(event.target.value)} />
-        <input type="submit" value="agregar desicion" disabled={!element}/>
+        <input 
+          className="rounded-tr-full rounded-br-full p-4 bg-green-500 text-white cursor-pointer"
+          type="submit" value="agregar desicion" disabled={!element}/>
       </form>
       <ul>
-        { elementsToRaffle.map((item, index)=> <li key={index} > {item} </li> )}
+        { elementsToRaffle.map((item, index)=> <li key={index} >⭐ {item} </li> )}
       </ul>
 
-      <button onClick={()=>handleRandom()} disabled={!elementsToRaffle.length}>SORTEAR A LA DAMA DE LA FORTUNA!</button>
+      <button
+        className="bg-green-500 text-xl text-white w-1/2 rounded-full p-4" 
+        onClick={()=>handleRandom()} disabled={!elementsToRaffle.length}>SORTEAR A LA DAMA DE LA FORTUNA! 🧙🏻‍♀️
+      </button>
     </div>
   );
 }
