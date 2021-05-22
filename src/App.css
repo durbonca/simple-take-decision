@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 input:disabled{
     color: #444444;
@@ -8,5 +9,5 @@ input:disabled{
 }
 
 h1{
-    
+    font-family: 'Satisfy', cursive;
 }

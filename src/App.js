@@ -19,11 +19,11 @@ function App() {
   }
 
   return (
-    <div className="h-screen flex flex-col bg-purple-500 items-center justify-around">
+    <div className="h-screen flex flex-col bg-purple-400 items-center justify-around">
       
-      <div class="flex flex-col items-center">
+      <div className="flex flex-col items-center">
         <img className="max-h-64 shadow-2xl rounded-3xl" src="./bruja.jpeg" alt="imagen de bruja"/>
-        <h1 className="text-6xl text-center">La Dama de la fortuna</h1>
+        <h1 className="text-6xl text-center mt-3">La Dama de la fortuna</h1>
       </div>
 
       <form onSubmit={handleSubmit}>
@@ -41,7 +41,7 @@ function App() {
       </ul>
 
       <button
-        className="bg-green-500 text-xl text-white w-1/2 rounded-full p-4" 
+        className="bg-green-500 text-xl font-bold w-1/2 rounded-full p-4" 
         onClick={()=>handleRandom()} disabled={!elementsToRaffle.length}>SORTEAR A LA DAMA DE LA FORTUNA! 🧙🏻‍♀️
       </button>
     </div>
